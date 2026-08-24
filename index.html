@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Examination System</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        .container {
+            width: 650px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .question {
+            margin-bottom: 25px;
+        }
+
+        .question p {
+            font-weight: bold;
+        }
+
+        input[type="text"] {
+            width: 90%;
+            padding: 8px;
+            margin-top: 5px;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: white;
+        }
+
+        input[type="submit"] {
+            background-color: green;
+        }
+
+        input[type="reset"] {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Online Examination</h1>
+
+    <form action="examServlet" method="post">
+        <label>Username:</label> <input type="text" name="username" required>
+        <br><br> <label>Roll No:</label> 
+        <input type="text" name="rollno" required> 
+        <br><br> <label>Email:</label>
+        <input type="email" name="email" required> <br><br>
+        <!-- Question 1 -->
+        <div class="question">
+            <p>1. What is the capital of India?</p>
+            <input type="radio" name="q1" value="Mumbai" required> Mumbai<br>
+            <input type="radio" name="q1" value="New Delhi"> New Delhi<br>
+            <input type="radio" name="q1" value="Kolkata"> Kolkata<br>
+            <input type="radio" name="q1" value="Chennai"> Chennai
+        </div>
+
+        <!-- Question 2 -->
+        <div class="question">
+            <p>2. Which language is mainly used for Java Servlets?</p>
+            <input type="radio" name="q2" value="Java" required> Java<br>
+            <input type="radio" name="q2" value="Python"> Python<br>
+            <input type="radio" name="q2" value="C"> C<br>
+            <input type="radio" name="q2" value="HTML"> HTML
+        </div>
+
+        <!-- Question 3 -->
+        <div class="question">
+            <p>3. Which HTML tag is used to create a hyperlink?</p>
+            <input type="radio" name="q3" value="a" required> &lt;a&gt;<br>
+            <input type="radio" name="q3" value="p"> &lt;p&gt;<br>
+            <input type="radio" name="q3" value="h1"> &lt;h1&gt;<br>
+            <input type="radio" name="q3" value="img"> &lt;img&gt;
+        </div>
+
+        <!-- Question 4 -->
+        <div class="question">
+            <p>4. Which database language is used to retrieve data?</p>
+            <input type="radio" name="q4" value="SQL" required> SQL<br>
+            <input type="radio" name="q4" value="HTML"> HTML<br>
+            <input type="radio" name="q4" value="CSS"> CSS<br>
+            <input type="radio" name="q4" value="XML"> XML
+        </div>
+
+        <!-- Question 5 -->
+        <div class="question">
+            <p>5. Which symbol is used to end a Java statement?</p>
+            <input type="radio" name="q5" value=";" required> ;<br>
+            <input type="radio" name="q5" value=":"> :<br>
+            <input type="radio" name="q5" value="."> .<br>
+            <input type="radio" name="q5" value=","> ,
+        </div>
+
+        <!-- Question 6 -->
+        <div class="question">
+            <p>6. What is the full form of HTML?</p>
+            <input type="text" name="q6"
+                   placeholder="Enter one-word answer"
+                   required>
+        </div>
+
+        <!-- Question 7 -->
+        <div class="question">
+            <p>7. What is the full form of CSS?</p>
+            <input type="text" name="q7"
+                   placeholder="Enter one-word answer"
+                   required>
+        </div>
+
+        <!-- Question 8 -->
+        <div class="question">
+            <p>8. Which language is used to write Java Servlets?</p>
+            <input type="text" name="q8"
+                   placeholder="Enter answer"
+                   required>
+        </div>
+
+        <!-- Question 9 -->
+        <div class="question">
+            <p>9. What keyword is used to inherit a class in Java?</p>
+            <input type="text" name="q9"
+                   placeholder="Enter answer"
+                   required>
+        </div>
+
+        <!-- Question 10 -->
+        <div class="question">
+            <p>10. What is the default port number of HTTP?</p>
+            <input type="text" name="q10"
+                   placeholder="Enter answer"
+                   required>
+        </div>
+
+        <br>
+
+        <input type="submit" value="Submit Exam">
+        <input type="reset" value="Clear">
+
+    </form>
+
+</div>
+
+</body>
+</html>
